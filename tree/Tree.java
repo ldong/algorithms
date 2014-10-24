@@ -88,7 +88,7 @@ public class Tree {
     }
 
     public static Node buildPreOrderTreeHelper(int[] arr, int start, int end){
-        if(start >= end){
+        if(start > end){
             return null;
         } else if (start == end ){
             return new Node(arr[start]);
