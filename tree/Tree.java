@@ -121,7 +121,7 @@ public class Tree {
             Node root = new Node(arr[end]);
             int split = end;
             // find the first element that less than the current node
-            while (split > start) {
+            while (split >= start) {
                 if (arr[split] < arr[end]) {
                     break;
                 }
