@@ -88,7 +88,7 @@ public class Tree {
     }
 
     public static Node buildPreOrderTreeHelper(int[] arr, int start, int end){
-        if(start > end){
+        if(start >= end){
             return null;
         } else if (start == end ){
             return new Node(arr[start]);
@@ -96,7 +96,7 @@ public class Tree {
             Node root = new Node(arr[start]);
             int split = start;
             // find the first element that greater than the current node
-            while (split < end) {
+            while (split <= end) {
                 if (arr[split] > arr[start]) {
                     break;
                 }
